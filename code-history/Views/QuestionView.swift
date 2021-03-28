@@ -4,7 +4,6 @@
 //
 //  Created by Giovanna Moeller on 27/03/21.
 //
-
 import SwiftUI
 
 struct QuestionView: View {
@@ -13,7 +12,7 @@ struct QuestionView: View {
     
     var body: some View {
         VStack {
-            Text(question.questionText).font(Font.largeTitle).bold().multilineTextAlignment(.center)
+            Text(question.questionText).font(.largeTitle).bold().multilineTextAlignment(.center)
             Spacer()
             ForEach(0..<question.possibleAnswers.count) { answerIndex in
                 Button(action: {
@@ -36,6 +35,6 @@ struct QuestionView: View {
 
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionView(question: Game().currentQuestion)
+        QuestionView(question: Game().currentQuestion).environmentObject(GameViewModel())
     }
 }

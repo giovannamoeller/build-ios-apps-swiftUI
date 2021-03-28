@@ -4,7 +4,6 @@
 //
 //  Created by Giovanna Moeller on 10/03/21.
 //
-
 import SwiftUI
 
 struct GameView: View {
@@ -13,17 +12,12 @@ struct GameView: View {
     
     var body: some View {
         ZStack {
-            (GameColor.main).ignoresSafeArea()
+            GameColor.main.ignoresSafeArea()
             VStack {
-                Spacer().frame(height: 50)
+                Spacer().frame(height: 50.0)
                 Text(viewModel.questionProgressText).font(.callout).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).padding()
                 QuestionView(question: viewModel.currentQuestion)
-                
-                Spacer()
-                
-            }.foregroundColor(.white).padding().environmentObject(viewModel) // access to the view model in our QuestionView
-            .navigationBarHidden(true) // hide back button
-            
+            }.foregroundColor(.white).environmentObject(viewModel).navigationBarHidden(true)
         }.background(
             NavigationLink(
                 destination: ScoreView(viewModel: ScoreViewModel(correctGuesses: viewModel.correctGuesses, incorrectGuesses: viewModel.incorrectGuesses)),

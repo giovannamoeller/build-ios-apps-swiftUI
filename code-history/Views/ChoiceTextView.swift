@@ -12,8 +12,7 @@ struct ChoiceTextView: View {
     let choiceText: String
     
     var body: some View {
-        Text(choiceText)
-            .padding(.vertical, 15.0).frame(width: 320).border(GameColor.accent, width: 1)
+        Text(choiceText).padding(.vertical, 15.0).frame(width: 320).border(GameColor.accent, width: 1)
         
     }
 }
