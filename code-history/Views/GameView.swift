@@ -15,29 +15,21 @@ struct GameView: View {
         correctAnswerIndex: 2
     )
     
+    @StateObject var viewModel = GameViewModel() // Updated
+    
     var body: some View {
         ZStack {
             (GameColor.main).ignoresSafeArea()
             VStack {
                 Spacer().frame(height: 50)
-                Text("1/10").font(.callout).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).padding()
-                Text(question.questionText).font(Font.largeTitle).bold().multilineTextAlignment(.center)
+                Text(viewModel.questionProgressText).font(.callout).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/).padding()
+                QuestionView(question: viewModel.currentQuestion)
                 
                 Spacer()
                 
-                VStack {
-                    ForEach(0..<question.possibleAnswers.count) { answerIndex in
-                        Button(action: {
-                            print("Tapped on action \(answerIndex)")
-                            /*GameColor.main = answerIndex == question.correctAnswerIndex ? .green : .red*/
-                            }, label: {
-                                ChoiceTextView(choiceText: question.possibleAnswers[answerIndex])
-                            })
-                        Spacer().frame(height: 30)
-                    }
-                }.font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                .fixedSize(horizontal: false, vertical: true)
-            }.foregroundColor(.white)
+            }.foregroundColor(.white).padding().environmentObject(viewModel) // access to the view model in our QuestionView
+            .navigationBarHidden(true) // hide back button
+            
         }
     }
 }

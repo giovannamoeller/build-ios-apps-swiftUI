@@ -13,7 +13,7 @@ struct ChoiceTextView: View {
     
     var body: some View {
         Text(choiceText)
-            .padding(.vertical, 15.0).frame(width: 360).border(GameColor.accent, width: 1)
+            .padding(.vertical, 15.0).frame(width: 320).border(GameColor.accent, width: 1)
         
     }
 }

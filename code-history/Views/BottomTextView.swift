@@ -19,6 +19,7 @@ struct BottomTextView: View {
             Spacer()
             }.background(GameColor.accent)
             .cornerRadius(6.0)
+        .frame(width: 320)
         }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48BA64EB26100B720012F445 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BA64EA26100B720012F445 /* GameViewModel.swift */; };
+		48BA64EE261010A20012F445 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BA64ED261010A20012F445 /* QuestionView.swift */; };
 		48FEAA36260D78CE002B1211 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 48FEAA35260D78CE002B1211 /* .gitignore */; };
 		48FEAA3A260D7EF1002B1211 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FEAA39260D7EF1002B1211 /* WelcomeView.swift */; };
 		48FEAA3F260D83EC002B1211 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FEAA3E260D83EC002B1211 /* GameColor.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48BA64EA26100B720012F445 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		48BA64ED261010A20012F445 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		48FEAA35260D78CE002B1211 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		48FEAA39260D7EF1002B1211 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		48FEAA3E260D83EC002B1211 /* GameColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48BA64E926100B610012F445 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				48BA64EA26100B720012F445 /* GameViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		48FF912625F944E8002A7D6B = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +79,7 @@
 		48FF913125F944E8002A7D6B /* code-history */ = {
 			isa = PBXGroup;
 			children = (
+				48BA64E926100B610012F445 /* ViewModels */,
 				48FF916826004508002A7D6B /* Models */,
 				48FF91692600454A002A7D6B /* Views */,
 				48FF913225F944E8002A7D6B /* code_historyApp.swift */,
@@ -99,6 +112,7 @@
 			children = (
 				48FEAA3E260D83EC002B1211 /* GameColor.swift */,
 				48FF913425F944E8002A7D6B /* GameView.swift */,
+				48BA64ED261010A20012F445 /* QuestionView.swift */,
 				48FEAA42260D878A002B1211 /* BottomTextView.swift */,
 				48FEAA39260D7EF1002B1211 /* WelcomeView.swift */,
 				48FF916225FC69E4002A7D6B /* ChoiceTextView.swift */,
@@ -176,6 +190,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BA64EE261010A20012F445 /* QuestionView.swift in Sources */,
+				48BA64EB26100B720012F445 /* GameViewModel.swift in Sources */,
 				48FF915F25FACE7A002A7D6B /* Question.swift in Sources */,
 				48FEAA3A260D7EF1002B1211 /* WelcomeView.swift in Sources */,
 				48FF9166260044B4002A7D6B /* Game.swift in Sources */,
@@ -313,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"code-history/Preview Content\"";
+				DEVELOPMENT_TEAM = 4VMTKGDC5W;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "code-history/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -334,6 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"code-history/Preview Content\"";
+				DEVELOPMENT_TEAM = 4VMTKGDC5W;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "code-history/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
